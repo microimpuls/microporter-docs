@@ -50,7 +50,7 @@ microporter, а также все необходимые библиотеки с
 
 Для запуска используется init.d скрипт: ``/etc/init.d/microporter``, доступные аргументы:
 ::
-    # /etc/init.d/microporter
+    $ /etc/init.d/microporter
     Usage: /etc/init.d/microporter {start|stop|restart|force-reload|reload}
 
 Файлы логов по-умолчанию сохраняются в ``/var/log/microporter/microporter.log``,
