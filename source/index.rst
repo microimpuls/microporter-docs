@@ -11,4 +11,9 @@ microporter - документация для ПО в составе решен�
 .. toctree::
    :maxdepth: 2
 
-   microporter.rst
+   description.rst
+   system_requirements.rst
+   install_and_configuration.rst
+   json_rpc_api.rst
+   troubleshooting.rst
+
