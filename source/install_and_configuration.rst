@@ -292,13 +292,15 @@ socket-write-buffer-size ``int``
 
 Адрес потока задается в формате:
 ::
-    <ip> <port> <cast_type> <protocol>
+    <ip> <port> <cast_type> <protocol> [<path>]
 
-Доступные *cast_type*: ``multicast``, ``unicast``, ``file``.
+Доступные *cast_type*: ``multicast``, ``unicast``, ``file``, ``http``.
 Доступные *protocol*: ``udp``, ``tcp``, ``ts``.
 
 При использовании типа ``file``, в качестве *ip* задаётся путь к директории,
 а в качестве *port* имя файла.
+
+Парметр ``path`` испольуется только при *cast_type* ``http`` и определяет путь до потока на сервере.
 
 Необязательно совпадение типа потока *cast_type* на отправителе и на приемнике,
 в случае различия microporter автоматически преобразует формат.
@@ -308,6 +310,7 @@ socket-write-buffer-size ``int``
     "239.0.0.1 1234 multicast udp"
     "198.51.100.15 2001 unicast tcp"
     "/home/storage filename.ts file ts"
+    "10.0.34.23 8081 http tcp /ch1/"
 
 .. _license-setup:
 
